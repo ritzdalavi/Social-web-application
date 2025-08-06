@@ -1,0 +1,214 @@
+/* Notifications Page Specific Styles */
+.notifications-page {
+  max-width: 800px;
+  margin: 80px auto 40px;
+  padding: 0 20px;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.notifications-header h1 {
+  font-size: 28px;
+  font-weight: 500;
+  color: #191919;
+  margin: 0;
+}
+
+.mark-all-read {
+  background: none;
+  border: none;
+  color: #0a66c2;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.mark-all-read:hover {
+  background-color: rgba(10, 102, 194, 0.1);
+}
+
+.mark-all-read:disabled {
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.notifications-tabs {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 12px;
+}
+
+.notifications-tabs .tab {
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.notifications-tabs .tab:hover {
+  background-color: #f3f3f3;
+  color: #191919;
+}
+
+.notifications-tabs .tab.active {
+  color: #0a66c2;
+  font-weight: 600;
+  background-color: rgba(10, 102, 194, 0.1);
+}
+
+.notifications-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.notification {
+  display: flex;
+  padding: 16px;
+  gap: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-radius: 4px;
+}
+
+.notification.unread {
+  background-color: #f3f2ef;
+}
+
+.notification:hover {
+  background-color: #f3f3f3;
+}
+
+.notification-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e6e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-header {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.user-avatar, .company-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.company-logo {
+  border-radius: 4px;
+}
+
+.notification-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #191919;
+  margin: 0;
+}
+
+.notification-header p {
+  font-size: 14px;
+  color: #666;
+  margin: 2px 0 0;
+}
+
+.notification-text {
+  font-size: 14px;
+  color: #191919;
+  margin: 8px 0;
+  line-height: 1.4;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #666;
+}
+
+.notification-post {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.no-notifications {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notifications-page {
+    margin-top: 60px;
+    padding: 0 16px;
+  }
+  
+  .notifications-tabs {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    gap: 8px;
+  }
+  
+  .notification {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .notification-icon,
+  .user-avatar,
+  .company-logo {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-header h1 {
+    font-size: 24px;
+  }
+  
+  .notification-post {
+    width: 48px;
+    height: 48px;
+  }
+}

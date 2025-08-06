@@ -1,0 +1,60 @@
+.story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 78px;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  
+  .story-avatar {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    padding: 2px;
+    background: linear-gradient(
+      45deg, 
+      #f09433 0%, 
+      #e6683c 25%, 
+      #dc2743 50%, 
+      #cc2366 75%, 
+      #bc1888 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .story-avatar.has-unseen {
+    background: linear-gradient(
+      45deg, 
+      #f09433 0%, 
+      #e6683c 25%, 
+      #dc2743 50%, 
+      #cc2366 75%, 
+      #bc1888 100%
+    );
+  }
+  
+  .story-avatar.seen {
+    background: #dbdbdb;
+  }
+  
+  .story-avatar img {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+  
+  .story-username {
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: #262626;
+  }

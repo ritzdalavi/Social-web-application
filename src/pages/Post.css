@@ -1,0 +1,128 @@
+.post-card {
+  background: white;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+.post-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-link {
+  font-weight: 600;
+  color: #262626;
+  text-decoration: none;
+}
+
+.post-location {
+  font-size: 12px;
+  color: #262626;
+  margin-top: 2px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.post-image {
+  width: 100%;
+}
+
+.post-image img {
+  width: 100%;
+  max-height: 800px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 12px 16px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.post-actions {
+  display: flex;
+  padding: 6px 16px;
+  gap: 16px;
+  border-top: 1px solid #efefef;
+  border-bottom: 1px solid #efefef;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.post-actions button:hover {
+  transform: scale(1.1);
+}
+
+.like-btn.liked {
+  color: #ed4956;
+}
+
+.post-comments {
+  padding: 8px 16px;
+}
+
+.comment {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+}
+
+.comment-author {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.add-comment {
+  display: flex;
+  padding: 16px;
+  border-top: 1px solid #efefef;
+}
+
+.add-comment input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.add-comment button {
+  background: none;
+  border: none;
+  color: #0095f6;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0 8px;
+}
+
+.add-comment button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}

@@ -1,0 +1,248 @@
+/* Navbar Variables */
+:root {
+  --navbar-height: 52px;
+  --primary-color: #0a66c2;
+  --primary-dark: #004182;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e6e6e6;
+  --bg-color: #ffffff;
+  --hover-bg: #f3f2ef;
+  --search-bg: #eef3f8;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --transition: all 0.2s ease;
+}
+
+/* Base Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background-color: var(--bg-color);
+  box-shadow: var(--shadow);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Brand Logo */
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+}
+
+/* Search Bar */
+.navbar-search {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar-search input {
+  width: 100%;
+  padding: 8px 15px 8px 40px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  background-color: var(--search-bg);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.navbar-search input:focus {
+  outline: none;
+  background-color: var(--bg-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.navbar-search svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  stroke: var(--text-light);
+}
+
+/* Navigation Links */
+.navbar-links {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  gap: 8px;
+  margin-left: 15px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: none;
+  height: 100%;
+  min-width: 80px;
+  border-radius: 4px;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+  background-color: var(--hover-bg);
+}
+
+.nav-link.active {
+  color: var(--text-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+.nav-link svg {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+  stroke-width: 1.5;
+  transition: var(--transition);
+}
+
+.nav-link:hover svg {
+  stroke: var(--text-color);
+}
+
+/* Profile Image */
+.nav-profile {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.nav-link:hover .nav-profile {
+  border-color: var(--primary-color);
+}
+
+/* Logout Button */
+.nav-link button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login Link */
+.nav-link.login-link {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: 24px;
+  padding: 6px 16px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.nav-link.login-link:hover {
+  background-color: rgba(10, 102, 194, 0.1);
+  box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar-search {
+    max-width: 300px;
+  }
+  
+  .nav-link {
+    min-width: 70px;
+    padding: 8px 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-search {
+    display: none;
+  }
+  
+  .navbar-links {
+    gap: 4px;
+  }
+  
+  .nav-link {
+    min-width: 60px;
+    font-size: 0;
+    padding: 8px 4px;
+  }
+  
+  .nav-link svg {
+    margin-bottom: 0;
+  }
+  
+  .nav-link.login-link {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-container {
+    padding: 0 10px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+  
+  .nav-link {
+    min-width: 50px;
+    padding: 8px 2px;
+  }
+  
+  .nav-link svg {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .nav-profile {
+    width: 24px;
+    height: 24px;
+  }
+}

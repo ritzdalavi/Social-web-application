@@ -1,0 +1,110 @@
+.explore-container {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 0 20px;
+  }
+  
+  .explore-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #262626;
+    font-size: 28px;
+  }
+  
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .explore-post {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 1/1;
+    background: #fafafa;
+  }
+  
+  .explore-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .explore-post:hover .explore-image {
+    transform: scale(1.05);
+  }
+  
+  .post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .explore-post:hover .post-overlay {
+    opacity: 1;
+  }
+  
+  .post-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .username {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .post-stats {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .likes {
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .explore-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    
+    .explore-title {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .explore-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }

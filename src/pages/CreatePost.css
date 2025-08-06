@@ -1,0 +1,135 @@
+.create-post-container {
+    max-width: 800px;
+    margin: 80px auto 20px;
+    padding: 20px;
+  }
+  
+  .create-post-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .create-post-content {
+    display: flex;
+    background: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    min-height: 500px;
+  }
+  
+  .upload-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    border-right: 1px solid #dbdbdb;
+  }
+  
+  .upload-icon {
+    width: 100px;
+    height: 100px;
+    border: 2px dashed #dbdbdb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .upload-icon svg {
+    width: 50px;
+    height: 50px;
+    color: #262626;
+  }
+  
+  .upload-area p {
+    margin: 0;
+    font-size: 18px;
+    color: #262626;
+  }
+  
+  .upload-area label {
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .image-preview {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .image-preview img {
+    max-width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+  }
+  
+  .caption-area {
+    width: 350px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .user-info span {
+    font-weight: bold;
+  }
+  
+  .caption-area textarea {
+    flex: 1;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    outline: none;
+  }
+  
+  .share-btn {
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .share-btn.disabled {
+    background-color: #b2dffc;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .create-post-content {
+      flex-direction: column;
+    }
+    
+    .upload-area {
+      border-right: none;
+      border-bottom: 1px solid #dbdbdb;
+      min-height: 300px;
+    }
+    
+    .caption-area {
+      width: 100%;
+    }
+  }

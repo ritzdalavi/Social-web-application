@@ -1,0 +1,155 @@
+.settings-container {
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 20px;
+    display: flex;
+  }
+  
+  .settings-sidebar {
+    width: 250px;
+    padding-right: 30px;
+    border-right: 1px solid #dbdbdb;
+  }
+  
+  .settings-sidebar h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  
+  .sidebar-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+    color: #8e8e8e;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  .sidebar-btn.active {
+    color: #262626;
+    font-weight: bold;
+    background-color: #f0f0f0;
+  }
+  
+  .settings-content {
+    flex: 1;
+    padding-left: 30px;
+  }
+  
+  .settings-section {
+    margin-bottom: 40px;
+  }
+  
+  .settings-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .settings-option {
+    margin-bottom: 25px;
+  }
+  
+  .settings-option h4 {
+    margin: 0 0 5px;
+    font-size: 16px;
+  }
+  
+  .settings-option p {
+    margin: 0 0 10px;
+    color: #8e8e8e;
+    font-size: 14px;
+  }
+  
+  .settings-btn {
+    background: none;
+    border: 1px solid #dbdbdb;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #0095f6;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  .logout-section {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #dbdbdb;
+  }
+  
+  .logout-btn {
+    color: #ed4956;
+    background: none;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .settings-container {
+      flex-direction: column;
+    }
+    
+    .settings-sidebar {
+      width: 100%;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 1px solid #dbdbdb;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .settings-content {
+      padding-left: 0;
+    }
+  }
